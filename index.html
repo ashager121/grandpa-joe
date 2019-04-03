@@ -6,18 +6,51 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
+
     <section class="banner">
         <div class="banner-img">
-            <img src="photos/banner.jpg"/>
+            <img src="photos/banner.jpg" srcset='photos/banner.jpg 1x,
+            photos/banner.jpg 2x'/>
         </div>
     </section>
-    <section class="profile-section">
-        <div class="profile-img">
-            <img src="photos/profile.png"/>
-        </div>
+    <section class="profile">
+            <div class="profile-pic">
+                    <img src="photos/profile.png" alt="profile"
+                        srcset='photos/profile.png 1x,
+                                photos/profile.png 2x'
+                    />
+            </div>
+            <!-- Audio Starts Here -->
+            <section class="sound-click">
+                    <audio src="audio/tim-allen-grunt.mp3" id="audio"></audio>
+                    <i class="fas fa-play" id="play" onclick="play()"></i>
+                    <script>
+                        function play() {
+                            var audio = document.getElementById('audio');
+                            if (audio.paused) {
+                                audio.play();
+                                $('#play').removeClass('glyphicon-play-circle')
+                                $('#play').addClass('glyphicon-pause')
+                            }else{
+                                audio.pause();
+                                audio.currentTime = 0
+                                $('#play').addClass('glyphicon-play-circle')
+                                $('#play').removeClass('glyphicon-pause')
+                            }
+                        }
+                    </script>
+                </section>
+            <h3>Grandpa Joe</h3>
     </section>
-    
+    <section class="bio">
+        <p class="bio-paragraph">In both versions of the tale, it is very clear who is number one in Grandpa Joe's mind. In both versions he decides he must accompany Charlie to the chocolate factory. In the movie, he actually speaks of the ticket as though he, not Charlie, was the winner.
+
+        He considers eating everything a viable option. He doesn't pause to consider that others might be hungry. He puts his immediate desire for fizzy lifting drinks ahead of Charlie's lifetime supply of chocolate.
+                
+        In short, he is worried about himself first and everyone else is a distant second. Even when Wonka give Charlie the factory his first thought is about himself and he never even asks about the rest of the family, not even his own wife.</p>
+    </section>
 </body>
 </html>
