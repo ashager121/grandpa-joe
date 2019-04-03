@@ -1,3 +1,29 @@
+html {
+    font-size: 1rem;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+ }
+ body > * {
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+    font-weight: 700;
+ }
+ .container {
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 1200px;
+}
+.background {
+    background-image: url('/photos/industrial-london.jpg');
+    background-color: rgba(230, 229, 229, 0.75);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* background-size: cover; */
+    background-position: center center;
+}
 .banner .banner-img {
     display: flex;
     justify-content: center;

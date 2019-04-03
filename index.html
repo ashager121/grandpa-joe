@@ -8,8 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
-<body>
-
+<body class="background">
     <section class="banner">
         <div class="banner-img">
             <img src="photos/banner.jpg" srcset='photos/banner.jpg 1x,
@@ -32,13 +31,9 @@
                             var audio = document.getElementById('audio');
                             if (audio.paused) {
                                 audio.play();
-                                $('#play').removeClass('glyphicon-play-circle')
-                                $('#play').addClass('glyphicon-pause')
                             }else{
                                 audio.pause();
                                 audio.currentTime = 0
-                                $('#play').addClass('glyphicon-play-circle')
-                                $('#play').removeClass('glyphicon-pause')
                             }
                         }
                     </script>
